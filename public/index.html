@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Whisperer | 宇宙精品與配件</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* 使用 Inter 字體以保持簡潔和現代感 */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #050510; /* 極深宇宙背景 */
+      }
+      .product-card {
+        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        background-color: #101020; /* 深藍色卡片背景 */
+        border: 1px solid #3b82f633; /* 淺藍邊框 */
+      }
+      .product-card:hover {
+        transform: translateY(-8px); /* 向上浮動 */
+        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3); /* 藍色光暈陰影 */
+      }
+      .neon-text {
+        text-shadow: 0 0 5px #06b6d4, 0 0 10px #06b6d4; /* 霓虹青色光效 */
+      }
+    </style>
+  </head>
+  <body class="bg-[#050510] text-white min-h-screen flex flex-col">
+    <!-- 頁面標頭 (Header) -->
+    <header
+      class="bg-[#101020] shadow-2xl sticky top-0 z-10 border-b border-indigo-500/50"
+    >
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- 品牌名稱/Logo -->
+        <a
+          href="#"
+          class="text-3xl font-extrabold text-indigo-400 tracking-widest uppercase"
+        >
+          <span class="inline-block mr-1 text-4xl neon-text text-cyan-400"
+            >✧</span
+          >
+          STAR WHISPERER
+        </a>
+        <!-- 導航 -->
+        <nav class="hidden sm:block">
+          <a
+            href="#watches"
+            class="text-gray-300 hover:text-cyan-400 mx-4 font-semibold transition duration-300"
+            >星辰時計</a
+          >
+          <a
+            href="#apparel"
+            class="text-gray-300 hover:text-cyan-400 mx-4 font-semibold transition duration-300"
+            >星際配件</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-300 hover:text-cyan-400 mx-4 font-semibold transition duration-300"
+            >聯絡星語</a
+          >
+        </nav>
+        <button
+          class="sm:hidden text-gray-300 hover:text-cyan-400 focus:outline-none"
+        >
+          <!-- 漢堡選單圖標 -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 主推區塊 (Hero Section) -->
+    <main class="flex-grow">
+      <section
+        class="relative overflow-hidden pt-24 pb-20 md:pt-40 md:pb-32 text-center"
+        style="background: linear-gradient(145deg, #050510 0%, #17173a 100%)"
+      >
+        <div class="container mx-auto px-4 relative z-10">
+          <h1
+            class="text-5xl sm:text-7xl font-light mb-4 leading-snug text-white tracking-tighter"
+          >
+            <span class="font-extrabold text-cyan-400 neon-text">星語者</span
+            >：超越時間的維度
+          </h1>
+          <p class="text-xl text-indigo-300 mb-10 max-w-4xl mx-auto">
+            從頂級時計到星際潮牌，Star Whisperer 將宇宙的美學融入您的生活風格。
+          </p>
+          <div class="space-x-4">
+            <a
+              href="#watches"
+              class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-lg py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105 border-2 border-cyan-400"
+            >
+              探索手錶
+            </a>
+            <a
+              href="#apparel"
+              class="inline-block bg-cyan-600 hover:bg-cyan-500 text-gray-900 font-bold text-lg py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105 border-2 border-cyan-600"
+            >
+              探索配件
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 區塊 1: 星辰時計 (Watches) -->
+      <section id="watches" class="py-16 md:py-24 bg-[#050510]">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-200 border-b-2 border-violet-400/50 pb-2 inline-block mx-auto"
+          >
+            — 星辰時計 —
+          </h2>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
+          >
+            <!-- 手錶 1 -->
+            <div class="product-card p-6 rounded-2xl shadow-xl">
+              <img
+                src="https://centralus1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=193391&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!4VrUlS7MWEaJ1xM-yYIBVvEjVr13gFRMt80uLQq7cd813T0GELsuTo1Ud9XDonz7%2Fitems%2F01WMUDEIJQIFDWRNMHDNFIL6PLVFX7XVXT%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI5NWQ0NWFlMS1jYzJlLTQ2NTgtODlkNy0xMzNlYzk4MjAxNTYiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3NjM4ODg0MDAifQ.kOlpKPMSiPAIa0dYciutFSRsn0u0elYtYmpbk8JDLxAGIhfJ4o6CXcyDJ8H0RuVyE0cyib41w1ycalrsJnUoTUSgakurOC1THGlruLSjGGkh6j3oiAbEzj14vNAMGaRQkQmY713XfgjcWQD4yAaU-S252ggqSa_iS36ZbBQ8aRTbi6wIGtyFFM6uXO6cerq-ES2tutAF3MiDcPhuEr4eLnzTNlnKm5a_w-1PtGhsLsKMkvfrtOvEVyO8Bky0ew8ikuLFpGLcgH5asLcAdMCwiokQbUWyG7dPuSNTqZGzxkhPMY9bm6e1I5iDT3BCML3zs2fluezel-xDGKt_6_VOmQZ0jt0O1HxTtOSq6hTVCPEpehNedWxTduaAx7T-ivHu.f7kQaf3PQNs-5WAWk7BZcp7EQY8AuIami2oyL82W8sw%26version%3DPublished&cb=63898612087&encodeFailures=1&width=752&height=430&action=Access"
+                alt="Star Whisperer 閃電腕錶"
+                class="w-full h-64 object-cover rounded-lg mb-4 border border-violet-500/50"
+              />
+              <span class="text-xs font-semibold text-cyan-400 mb-1 block"
+                >旗艦系列</span
+              >
+
+              <h3 class="text-2xl font-semibold text-violet-400 mb-2">
+                Star Whisperer 閃電腕錶
+              </h3>
+
+              <p class="text-gray-400 mb-4 text-sm">
+                採用非接觸式磁懸浮指針，顯示地球和月球的即時軌道。
+              </p>
+
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xl font-extrabold text-white"
+                  >$654,25 USD</span
+                >
+
+                <a
+                  href="purchase.html?product=Star Whisperer 閃電腕錶"
+                  class="bg-cyan-600 hover:bg-cyan-500 text-gray-900 font-bold py-2 px-6 rounded-full transition shadow-lg"
+                >
+                  立即購買
+                </a>
+              </div>
+            </div>
+
+            <!-- 手錶 2 -->
+            <div class="product-card p-6 rounded-2xl shadow-xl">
+              <img
+                src="https://centralus1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=193391&inputFormat=jpeg&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!4VrUlS7MWEaJ1xM-yYIBVvEjVr13gFRMt80uLQq7cd813T0GELsuTo1Ud9XDonz7%2Fitems%2F01WMUDEIJU5DHF62U37JHLSPZQ5ODV6TSN%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI5NWQ0NWFlMS1jYzJlLTQ2NTgtODlkNy0xMzNlYzk4MjAxNTYiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3NjM4ODg0MDAifQ.rHbJt9ii0vI07JqzsB6QqaY_gHJB1oGk0PlULPXj_vXhy1x9HQi8YBD-pBGgebZ4gfCGWsDvChy1lso83i7vOrcurWzcNjNkKCDuuDIzfQKAlNpcXSdHnwTCfpOMMxnJJQGLNnr4vanzdRlCVqEOBaTth7KKXCpe1bnY8Erpp7tNskD-JCOiHx1p4cG3oVP5OU3aKiiR8PEFf51J9lcQbdH1kyVURbJ0-s0nHsqd6hYQY5RZTbjIQFSbyJdlt1jBluLZSqOnnKeoi16KnNzU7pKMklCKSS6rcIKp3XQoeyMpjj0Dob5gGpaFRWg2XU6JN4Qgg_YHg8hF9wjfD2HG22pN-khzLlDAGxGFrRBTpgl4tyCjNXT9JwsVtbnICYsz.y38y01ioEPtXidom38jjxa7ypTu1F5KRCJROqWlb-YU%26version%3DPublished&cb=63898611218&encodeFailures=1&width=753&height=410&action=Access"
+                alt="脈衝星計時"
+                class="w-full h-64 object-cover rounded-lg mb-4 border border-yellow-400/50"
+              />
+              <span class="text-xs font-semibold text-cyan-400 mb-1 block"
+                >旗艦系列</span
+              >
+
+              <h3 class="text-2xl font-semibold text-yellow-400 mb-2">
+                脈衝星計時
+              </h3>
+
+              <p class="text-gray-400 mb-4 text-sm">
+                精準到微秒，專為監測超新星爆發等極端事件設計。
+              </p>
+
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xl font-extrabold text-white"
+                  >$654,25 USD</span
+                >
+
+                <a
+                  href="purchase.html?product=脈衝星計時"
+                  class="bg-cyan-600 hover:bg-cyan-500 text-gray-900 font-bold py-2 px-6 rounded-full transition shadow-lg"
+                >
+                  立即購買
+                </a>
+              </div>
+            </div>
+
+            <!-- 手錶 3 -->
+            <div class="product-card p-6 rounded-2xl shadow-xl">
+              <img
+                src="https://centralus1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=193391&inputFormat=jpeg&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!4VrUlS7MWEaJ1xM-yYIBVvEjVr13gFRMt80uLQq7cd813T0GELsuTo1Ud9XDonz7%2Fitems%2F01WMUDEILLQJIBULQK5NH2BRUHMF4DTZSJ%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI5NWQ0NWFlMS1jYzJlLTQ2NTgtODlkNy0xMzNlYzk4MjAxNTYiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3NjM4ODg0MDAifQ.lBXGNtc7wVURh3LKgKfBevQK7YZsVJ_Qokv99uaq_Z7AMDGXEh_RwCWxUb2Tl5MJkDrUbxkJp47yO_yFBidDeYlVQ8lW7oan-yojXa6r3wKQPI91Y1uzaomQrqi2Nyi1MblISLGUtXF6abbJ_JDskNZ7as8wIMIyIbembv1s9ezgEhHAK0RDdvXq7U-uzcw19jPznfXY44aqRUgvI7HGZivJ1XjNANSTx6SBWsCuZ-pwY7UNY9IvJEdQOqgWobjbAQprv5i589ZE4GgztubNtU-2fOY5dyQTDsoDf7Gr_2X1x6MW_fKz7Onc3Kc7y-Cliqf_Zs9-SJT9sdtwmRrivBsQAa96L7vTGvkdLjtguZ9a6lyBf5us01rqtQsUHb0K.VVtYW6ZTWJl1tRoLfAR-Ej5pWgKaj66Jk6-NrIWTGcw%26version%3DPublished&cb=63898775508&encodeFailures=1&width=753&height=410&action=Access"
+                alt="奇異點陀飛輪"
+                class="w-full h-64 object-cover rounded-lg mb-4 border border-pink-500/50"
+              />
+              <span class="text-xs font-semibold text-cyan-400 mb-1 block"
+                >旗艦系列</span
+              >
+
+              <h3 class="text-2xl font-semibold text-pink-400 mb-2">
+                奇異點陀飛輪
+              </h3>
+
+              <p class="text-gray-400 mb-4 text-sm">
+                微型黑洞概念陀飛輪，挑戰地心引力對計時的影響。
+              </p>
+
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xl font-extrabold text-white"
+                  >$654,25 USD</span
+                >
+
+                <a
+                  href="purchase.html?product=奇異點陀飛輪"
+                  class="bg-cyan-600 hover:bg-cyan-500 text-gray-900 font-bold py-2 px-6 rounded-full transition shadow-lg"
+                >
+                  立即購買
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 區塊 2: 星際配件 (Apparel & Bags) -->
+      <section id="apparel" class="py-16 md:py-24 bg-[#0a0a1a]">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-200 border-b-2 border-cyan-400/50 pb-2 inline-block mx-auto"
+          >
+            — 星際配件 (Apparel & Bags) —
+          </h2>
+
+          <!-- 產品網格: 手機 1 欄，平板 2 欄，桌面 4 欄 -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8"
+          >
+            <!-- 配件 1: 宇宙潮T (T-Shirt) -->
+            <div class="product-card p-4 rounded-xl shadow-lg">
+              <img
+                src="https://centralus1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=193391&inputFormat=jpg&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!4VrUlS7MWEaJ1xM-yYIBVvEjVr13gFRMt80uLQq7cd813T0GELsuTo1Ud9XDonz7%2Fitems%2F01WMUDEIJO5JC5H7KMFZCYHT5YF5BF7WFD%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI5NWQ0NWFlMS1jYzJlLTQ2NTgtODlkNy0xMzNlYzk4MjAxNTYiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3NjMyOTQ0MDAifQ.Cu1cQLFoCf8LiqOurUXgCz55f3r_syafMlAk6SNWPlnxOoeK4oYtA1pDoim9_Ftg-AWmqSzTGxY7XjhI9dqxkvc8EIKLlKEI7SEFTe7wk5MvwNZjOUD-UI90_XQBRRhdIIa9Q1Ty6tf2Rvi0ebI7gFz_AP2QC9UhlCxeYl-VCmYe2F-ihdRkAr0Ed0_CtR7TuCt-NiXsVLCe48u8GKgcklTtUKaGwt7jhUynGiPg6M8VJdpYT3N3RWOkpZ_hdaRzV20gpsVAMBbwZbyDsCghgCUO0FRexGMgMfmhSM0LQFpj6w9jBpzZ-FPutIk9Jh2JQ3_O-HZeJ8FA7oTVQRVThfekBXAJIkyVhg8DZZo9CaG7rpLcCjUXt2_pmKSG107l.tsbq795vhPKPtRTXYbGc2Vb4XUL8g_2BJFTdYzmR-ZQ%26version%3DPublished&cb=63896956060&encodeFailures=1&width=500&height=750&action=Access"
+                alt="宇宙潮T"
+                class="w-full h-40 md:h-52 object-cover rounded-lg mb-3 border border-green-500/50"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x600/101020/4ade80?text=T-SHIRT';"
+              />
+              <span class="text-xs font-semibold text-green-400 mb-1 block"
+                >潮 T 系列</span
+              >
+              <h3 class="text-lg font-semibold text-gray-200 mb-2">暗空潮T</h3>
+              <p class="text-gray-400 mb-3 text-xs hidden sm:block">
+                採用奈米纖維，印花設計。
+              </p>
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center"
+              >
+                <span class="text-md font-extrabold text-white"
+                  >$61,50 USD</span
+                >
+                <button
+                  class="w-full sm:w-auto mt-2 sm:mt-0 bg-indigo-600 text-white font-medium py-1 px-3 rounded-full text-xs hover:bg-indigo-500 transition duration-300"
+                >
+                  選購
+                </button>
+              </div>
+            </div>
+
+            <!-- 配件 2: 星雲肩背包 (Backpack) -->
+            <div class="product-card p-4 rounded-xl shadow-lg">
+              <img
+                src="https://centralus1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=193391&inputFormat=jpg&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!4VrUlS7MWEaJ1xM-yYIBVvEjVr13gFRMt80uLQq7cd813T0GELsuTo1Ud9XDonz7%2Fitems%2F01WMUDEIMS3PB4MZBMTJFYQ33SNNWL74U4%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI5NWQ0NWFlMS1jYzJlLTQ2NTgtODlkNy0xMzNlYzk4MjAxNTYiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3NjMyOTQ0MDAifQ.9T1tdr2ayHgZTNGbZEnIWVc4Vgm_p123OxbJStvQI1wUZhdX8cXVUvhbB5lm-c28rXXUSUF1KpC1Lb7HRUnqVNXg4R1CaZoxB0LCfP9Rt0_8qj6YptYSQSdiLGqdaMEb__NPqc9A0S929tWVRnYbDlJlY44llCFcGcDosO2YkBJAjvXLGYAWl7jKeTM21v31-EGhXBU5fEEkQ9pmp8H6q0073rU8U8Ji9rFLwgdoUamF4CEcUC2r4yVNxWpoq0LDxL4VNrTS6GBS9RaDGAEwEfr_WuCvn7BdXsZtvoh42IK5Kux3oCEa_0PV_jlOamn6OmFciDcUYBogZQNzbduXjf2V1IQjqs9DCwikDYyTzolIKR6Dx72FaNJ0GzLf3bIe.QazEqgTHvMB39kBhlxHja8x_wWPQnA5wcjKvTrgo1kQ%26version%3DPublished&cb=63898873939&encodeFailures=1&width=528&height=939&action=Access"
+                alt="星雲肩背包"
+                class="w-full h-40 md:h-52 object-cover rounded-lg mb-3 border border-indigo-500/50"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x600/101020/8b5cf6?text=BACKPACK';"
+              />
+              <span class="text-xs font-semibold text-green-400 mb-1 block"
+                >包袋系列</span
+              >
+              <h3 class="text-lg font-semibold text-gray-200 mb-2">
+                星雲肩背包
+              </h3>
+              <p class="text-gray-400 mb-3 text-xs hidden sm:block">
+                帆布材質，多功能隔層設計，適合休閒搭配。
+              </p>
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center"
+              >
+                <span class="text-md font-extrabold text-white"
+                  >$28,79 USD</span
+                >
+                <button
+                  class="w-full sm:w-auto mt-2 sm:mt-0 bg-indigo-600 text-white font-medium py-1 px-3 rounded-full text-xs hover:bg-indigo-500 transition duration-300"
+                >
+                  選購
+                </button>
+              </div>
+            </div>
+
+            <!-- 組合 A：T-shirt + 手錶 -->
+            <div class="product-card p-4 rounded-xl shadow-lg">
+              <img
+                src="https://centralus1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=193391&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!4VrUlS7MWEaJ1xM-yYIBVvEjVr13gFRMt80uLQq7cd813T0GELsuTo1Ud9XDonz7%2Fitems%2F01WMUDEIOPQYHPLOAQUNDKRRW4OGSXH3PU%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI5NWQ0NWFlMS1jYzJlLTQ2NTgtODlkNy0xMzNlYzk4MjAxNTYiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3NjMzMDUyMDAifQ.DzvVuWS0t9aB1OKctPrA2oRSzaeOIL1js8O0xzt4Ax-sLtR0PGMGbhOdVcRmDoWVDhwidSD2Fbreg2shmSy4JfrxKR0tSBdItpIQF593gtaEtfqhahqwBDbVUezMQA4s8q3OqrrbyLZd2sQTJUUSSWX-tPuT78wRSEX-UA4AkVb9-9AIoJASVEBdWDeSd9qssB-1f1ZbiR8Jby2RaC0lpEXodROoyXQtbTwIYfYCmufYDD72v8jwK5W94Zt8KguzZMRGJxo1NrgctK1QRiYdZJlGtlqcb3eW1HHa-4XgptVphtDZdeN8xIEQAhiTdXfIadAEfAKk1_46Gi3Nd59eea4wGvq_msfhYriWn1q9TAv3TLCEvvjvesoGa2FkZxkl.B6qR5GayzhxUB4Y8UbefpOqRHoIMFtjPPdgbsQ5TV6E%26version%3DPublished&cb=63898887749&encodeFailures=1&width=1344&height=768&action=Access"
+                alt="T-shirt 與手錶套組"
+                class="w-full h-40 md:h-52 object-cover rounded-lg mb-3 border border-indigo-500/50"
+              />
+
+              <span class="text-xs font-semibold text-yellow-400 mb-1 block"
+                >限量組合</span
+              >
+
+              <h3 class="text-lg font-semibold text-gray-200 mb-2">
+                宇宙風格套組：T-shirt + 手錶
+              </h3>
+
+              <p class="text-gray-400 mb-3 text-xs hidden sm:block">
+                經典潮流 T-shirt 搭配星空藝術錶款，打造最具識別度的星語者造型。
+              </p>
+
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center"
+              >
+                <span class="text-md font-extrabold text-white"
+                  >$357,87 USD</span
+                >
+
+                <a
+                  href="purchase.html"
+                  class="w-full sm:w-auto mt-2 sm:mt-0 bg-indigo-600 text-white font-medium py-1 px-3 rounded-full text-xs hover:bg-indigo-500 transition duration-300"
+                >
+                  選購
+                </a>
+              </div>
+            </div>
+            <!-- 組合 B：手錶 + 肩背袋 -->
+            <div class="product-card p-4 rounded-xl shadow-lg">
+              <img
+                src="https://centralus1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=193391&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!4VrUlS7MWEaJ1xM-yYIBVvEjVr13gFRMt80uLQq7cd813T0GELsuTo1Ud9XDonz7%2Fitems%2F01WMUDEIIW2VLCFQOG4RD2GJTLPLPDB4DQ%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI5NWQ0NWFlMS1jYzJlLTQ2NTgtODlkNy0xMzNlYzk4MjAxNTYiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3NjMzMDUyMDAifQ.db3UPs4mzWjMUQEwFKYU1ul5mZprdb24EyiZ0UVuiX8L50FKELUsVsluT3SO53OXvYahhxp3eCmf3R7gHVOOTc-NV0wkhUNT4PndBY6mQ8TOlZYD3Aa7WZ_aNr2K7OfJJShY2AXGzuA6L0vPDE28lj0Y-2zqUMfvNiAm__-IgtZRy87H---VAZIdReQNUh0IRIvkYMUMscUDWY6c3NpWULoCdTHdLqYpLI9pUmcZdUY5Ga1ElPK9N6zTfNCRaC4zu51Vkjyfh7sspAyCOjLNff8JQoW4Es6nfBE8I9BNSzkbNs2b7ZNCz5MvDEadD8DJ4OPc70DmedemxAe2-zq1ZygD4TcsWnybiDKJdRbPaj_XpMN7bzx4D8W77puMwZHT._sl91PXXdv-O5vq33QPuZhA0haS1c5MvZSC5Ukh-Y_U%26version%3DPublished&cb=63898888094&encodeFailures=1&width=1344&height=768&action=Access"
+                alt="手錶與肩背袋套組"
+                class="w-full h-40 md:h-52 object-cover rounded-lg mb-3 border border-pink-400/50"
+              />
+
+              <span class="text-xs font-semibold text-green-400 mb-1 block"
+                >人氣套組</span
+              >
+
+              <h3 class="text-lg font-semibold text-gray-200 mb-2">
+                星際時尚套組：手錶 + 肩背袋
+              </h3>
+
+              <p class="text-gray-400 mb-3 text-xs hidden sm:block">
+                星空藝術手錶搭配文青質感肩背袋，展現獨特星語者美學。
+              </p>
+
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center"
+              >
+                <span class="text-md font-extrabold text-white"
+                  >$683,03 USD</span
+                >
+
+                <a
+                  href="purchase.html"
+                  class="w-full sm:w-auto mt-2 sm:mt-0 bg-indigo-600 text-white font-medium py-1 px-3 rounded-full text-xs hover:bg-indigo-500 transition duration-300"
+                >
+                  選購
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 品牌故事/宣言 (Call to Action) -->
+      <section class="py-20 bg-[#101020]" id="contact">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+          <h2 class="text-4xl font-extrabold text-indigo-400 neon-text mb-6">
+            接收星辰的訊號
+          </h2>
+          <p class="text-xl text-gray-300 mb-8">
+            Star Whisperer
+            邀請您超越塵世的時間概念。立即填寫訂購單，體驗星辰之力。
+          </p>
+          <!-- 連結已更新至 purchase.html -->
+          <a
+            href="purchase.html"
+            class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-lg py-3 px-10 rounded-full shadow-xl transition duration-300 transform hover:scale-105 border-2 border-cyan-400"
+          >
+            填寫訂購單
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- 頁尾 (Footer) -->
+    <footer class="bg-[#0b0b18] mt-auto py-8 border-t border-indigo-500/30">
+      <div class="container mx-auto px-4 text-center">
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8 mb-4 text-gray-400 text-sm"
+        >
+          <a href="#" class="hover:text-cyan-400 transition duration-300"
+            >星際協定</a
+          >
+          <a href="#" class="hover:text-cyan-400 transition duration-300"
+            >維護中心</a
+          >
+          <a href="#" class="hover:text-cyan-400 transition duration-300"
+            >時空跳躍點 (經銷)</a
+          >
+        </div>
+        <p class="text-gray-600 text-xs mt-4">
+          &copy; 2025 Star Whisperer. 宇宙級版權所有.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
