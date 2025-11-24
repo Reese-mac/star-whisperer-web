@@ -29,7 +29,7 @@ app.use(cookieParser());
 /* ==========================
    🖼 靜態檔案（HTML / 圖片 / CSS）
 ========================== */
-// ★★★ 最重要：確保圖片、CSS、HTML 都從 public 提供
+// ★★★ 最重要：讓 index.html / purchase.html 能被 Render 正常讀取
 app.use(express.static(path.join(__dirname, "public")));
 
 /* ==========================
@@ -60,7 +60,6 @@ const JWT_SECRET = "StarWhispererSecret";
 /* ==========================
    ✉ Gmail（訂單通知）
 ========================== */
-// ⚠️ 如果你不使用 Email，可以先註解
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -90,7 +89,7 @@ app.post("/admin/login", (req, res) => {
 });
 
 /* ==========================
-   🛡 後台保護中介層
+   🛡 後台保護
 ========================== */
 function adminAuth(req, res, next) {
   const token = req.cookies.adminToken;
@@ -128,7 +127,6 @@ app.post("/api/orders", (req, res) => {
 
   const orderId = result.lastInsertRowid;
 
-  // ⚠️ 如果你不想用 email，可以註解掉此區
   transporter.sendMail({
     from: "Star Whisperer 訂單通知",
     to: "yourEmail@gmail.com",
@@ -156,10 +154,10 @@ app.get("/admin/orders", adminAuth, (req, res) => {
 });
 
 /* ==========================
-   ✔ 啟動伺服器（最穩定版本）
+   ✔ 最重要：Render 必須使用動態 PORT
 ========================== */
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`🚀 Star Whisperer Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Star Whisperer Server running on port ${PORT}`);
 });
