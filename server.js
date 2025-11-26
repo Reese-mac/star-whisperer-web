@@ -29,7 +29,11 @@ app.use(cookieParser());
 /* ==========================
    🖼 靜態檔案（HTML / 圖片 / CSS）
 ========================== */
-// ★★★ 最重要：讓 index.html / purchase.html 能被 Render 正常讀取
+
+// ⭐ 最重要：讓 index.html / purchase.html 能被 Express 正常讀取
+app.use(express.static(__dirname));
+
+// ⭐ 提供 public 資料夾中的圖片 / CSS / JS
 app.use(express.static(path.join(__dirname, "public")));
 
 /* ==========================
@@ -104,7 +108,7 @@ function adminAuth(req, res, next) {
 }
 
 /* ==========================
-   📝 建立訂單
+   📝 建立訂單 API
 ========================== */
 app.post("/api/orders", (req, res) => {
   const { product, quantity, name, phone, address } = req.body;
@@ -127,6 +131,7 @@ app.post("/api/orders", (req, res) => {
 
   const orderId = result.lastInsertRowid;
 
+  // 傳送 Email 通知
   transporter.sendMail({
     from: "Star Whisperer 訂單通知",
     to: "yourEmail@gmail.com",
@@ -146,7 +151,7 @@ app.post("/api/orders", (req, res) => {
 });
 
 /* ==========================
-   📦 後台訂單列表
+   📦 後台訂單列表 API
 ========================== */
 app.get("/admin/orders", adminAuth, (req, res) => {
   const rows = db.prepare(`SELECT * FROM orders ORDER BY id DESC`).all();
@@ -154,7 +159,7 @@ app.get("/admin/orders", adminAuth, (req, res) => {
 });
 
 /* ==========================
-   ✔ 最重要：Render 必須使用動態 PORT
+   ✔ Render / Node 必須使用動態 PORT
 ========================== */
 const PORT = process.env.PORT || 3000;
 
