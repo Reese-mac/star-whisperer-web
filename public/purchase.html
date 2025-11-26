@@ -34,53 +34,6 @@
         -webkit-text-fill-color: transparent;
         text-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
       }
-
-      label {
-        color: #9ac9ff !important;
-        text-shadow: 0 0 6px rgba(0, 180, 255, 0.45);
-      }
-
-      .dropdown {
-        position: relative;
-        width: 100%;
-      }
-
-      .dropdown-selected {
-        padding: 14px;
-        border-radius: 10px;
-        background: rgba(17, 24, 39, 0.35);
-        border: 1px solid rgba(99, 102, 241, 0.5);
-        color: #7fe8ff !important;
-        font-weight: 500;
-        cursor: pointer;
-        text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
-      }
-
-      .dropdown-list {
-        position: absolute;
-        width: 100%;
-        margin-top: 6px;
-        background: rgba(10, 10, 24, 0.9);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        max-height: 260px;
-        overflow-y: auto;
-        display: none;
-        z-index: 50;
-      }
-
-      .dropdown-item {
-        padding: 12px 14px;
-        cursor: pointer;
-        color: #9fe6ff !important;
-        transition: 0.2s;
-      }
-
-      .dropdown-item:hover {
-        background: rgba(255, 255, 255, 0.12);
-        color: #ffffff !important;
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
-      }
     </style>
   </head>
 
@@ -93,7 +46,7 @@
       STAR WHISPERER
     </a>
 
-    <div class="relative max-w-2xl mx-auto glass p-10">
+    <div class="relative max-w-xl mx-auto glass p-10 text-center">
       <button
         onclick="history.back()"
         class="absolute top-4 left-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-xl"
@@ -101,120 +54,17 @@
         ←
       </button>
 
-      <h1 class="text-3xl font-bold text-center mb-6">填寫商品訂購單</h1>
+      <h1 class="text-3xl font-bold mb-8">前往訂購</h1>
 
-      <form id="orderForm" onsubmit="event.preventDefault();" class="space-y-6">
-        <!-- 商品 -->
-        <div>
-          <label class="block text-sm mb-2">選擇訂購商品</label>
-
-          <div class="dropdown" id="productDropdown">
-            <div id="dropdownSelected" class="dropdown-selected">
-              -- 選擇星際精品 --
-            </div>
-
-            <div class="dropdown-list" id="dropdownList">
-              <div class="dropdown-item" data-value="Star Whisperer 閃電腕錶">
-                Star Whisperer 閃電腕錶 — $654.25 USD
-              </div>
-
-              <div class="dropdown-item" data-value="脈衝星計時">
-                脈衝星計時 — $654.25 USD
-              </div>
-
-              <div class="dropdown-item" data-value="奇異點陀飛輪">
-                奇異點陀飛輪 — $654.25 USD
-              </div>
-
-              <div class="dropdown-item" data-value="暗空潮T">
-                暗空潮T — $61.50 USD
-              </div>
-
-              <div class="dropdown-item" data-value="星雲肩背包">
-                星雲肩背包 — $28.79 USD
-              </div>
-
-              <div class="dropdown-item" data-value="套組 A">
-                套組 A（T-shirt + 手錶）— $357.87 USD
-              </div>
-
-              <div class="dropdown-item" data-value="套組 B">
-                套組 B（手錶 + 肩背袋）— $683.03 USD
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <input type="hidden" id="product" />
-
-        <!-- 數量 -->
-        <div>
-          <label class="block text-sm mb-2">數量</label>
-          <input
-            id="quantity"
-            type="number"
-            min="1"
-            value="1"
-            class="w-full p-3 rounded-lg bg-gray-900/50 border border-indigo-500/50"
-          />
-        </div>
-
-        <!-- 收件人 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm mb-2">收貨人全名</label>
-            <input
-              id="name"
-              class="w-full p-3 rounded-lg bg-gray-900/50 border border-indigo-500/50"
-            />
-          </div>
-          <div>
-            <label class="block text-sm mb-2">聯絡電話</label>
-            <input
-              id="phone"
-              class="w-full p-3 rounded-lg bg-gray-900/50 border border-indigo-500/50"
-            />
-          </div>
-        </div>
-
-        <!-- 地址 -->
-        <div>
-          <label class="block text-sm mb-2">收貨地址（選填）</label>
-          <textarea
-            id="address"
-            rows="3"
-            class="w-full p-3 rounded-lg bg-gray-900/50 border border-indigo-500/50"
-          ></textarea>
-        </div>
-
-        <!-- ⭐ 新版按鈕：前往 Google 表單 -->
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSe9jQ2vPJZ1UbsLb4FqKudwM6Our4XXE94f0p6-AVETEoutvQ/viewform"
-          target="_blank"
-          class="glass-button w-full py-4 rounded-xl text-center text-xl font-bold block"
-        >
-          ✦ 前往填寫訂購表單
-        </a>
-      </form>
+      <!-- ⭐ 按鈕：直接前往 Google 表單 -->
+      <a
+        id="goForm"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSe9jQ2vPJZ1UbsLb4FqKudwM6Our4XXE94f0p6-AVETEoutvQ/viewform"
+        target="_blank"
+        class="glass-button w-full py-4 rounded-xl text-center text-xl font-bold block"
+      >
+        ✦ 前往填寫訂購表單
+      </a>
     </div>
-
-    <script>
-      // 下拉選單功能
-      const dropdownSelected = document.getElementById("dropdownSelected");
-      const dropdownList = document.getElementById("dropdownList");
-
-      dropdownSelected.onclick = () => {
-        dropdownList.style.display =
-          dropdownList.style.display === "block" ? "none" : "block";
-      };
-
-      document.querySelectorAll(".dropdown-item").forEach((item) => {
-        item.onclick = () => {
-          dropdownSelected.textContent = item.textContent;
-          dropdownList.style.display = "none";
-          document.getElementById("product").value = item.dataset.value;
-        };
-      });
-    </script>
   </body>
 </html>
